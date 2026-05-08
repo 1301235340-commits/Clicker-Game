@@ -1,0 +1,40 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(135deg, #034660 0%, #000000 100%);
+     font-family: Arial, sans-serif;
+     position: relative;
+ }
+
+ #clickButton {
+     width: 500px;
+     height: 500px;
+     border-radius: 50%;
+     border: none;
+     background: rgb(112, 3, 3);
+     color: rgb(0, 0, 0);
+     font-size: 100px;
+     font-weight: bold;
+     cursor: pointer;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+     transition: all 0.2s ease;
+ }
+
+ #clickButton:hover {
+     background: #b80909;
+     transform: scale(1.05);
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+ }
+
+ #clickButton:active {
+     transform: scale(0.95);
+ }

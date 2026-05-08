@@ -1,69 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clicker!</title>
-     <link rel="stylesheet" href="styles.css">
+    <title>RedClickerButton!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #034660 0%, #000000 100%);
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-        
-        #clickButton {
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            border: none;
-            background: rgb(112, 3, 3);
-            color: rgb(0, 0, 0);
-            font-size: 100px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            transition: all 0.2s ease;
-        }
-        
-        #clickButton:hover {
-            background: #b80909;
-            transform: scale(1.05);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-        
-        #clickButton:active {
-            transform: scale(0.95);
-        }
-    </style>
-
-    <div id="statusBoard" style="position: absolute; top: 20px; right: 20px; background: rgba(116, 7, 7, 0.9); padding: 20px; border-radius: 10px; color: black;">
-    <h3>Stats</h3>
-    <p>Total Clicks: <span id="totalClicks">0</span></p>
-    <p>Power-Ups Owned: <span id="powerUpCount">0</span></p>
-    <p>Times Played: <span id="timesPlayed">0</span></p>
-</div>
+ <div id="statusBoard"
+        style="position: absolute; top: 20px; right: 20px; background: rgba(116, 7, 7, 0.9); padding: 20px; border-radius: 10px; color: black;">
+        <h1>Stats:</h1>
+        <h3>Total Clicks: <span id="totalClicks">0</span></h3>
+        <h3>Power-Ups Owned: <span id="powerUpCount">0</span></h3>
+        <h3>Times Played: <span id="timesPlayed">0</span></h3>
+    </div>
 
 
     <button id="clickButton">Click!</button>
-    
+
     <button id="powerUpButton" style="display: none; position: absolute; bottom: 20px; left: 20px; padding: 10px 20px;
-     background: #710909; color: black; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Power Up!</button>
+     background: #710909; color: black; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Power
+        Up!</button>
 
     <script src="script.js"></script>
 </body>
+
 </html>
