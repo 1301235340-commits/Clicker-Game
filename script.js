@@ -50,7 +50,7 @@ function updateDisplays() {
 }
 
 // Function to handle the main button click
-function handleClick() {
+function handleClick.blur() {
     score += clickValue;
     totalClicks++;
     updateDisplays();
