@@ -4,27 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RedClickerButton!</title>
+    <title>Don't Click!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <div id="statusBoard"
-        style="position: absolute; top: 20px; right: 20px; background: rgba(116, 7, 7, 0.9); padding: 20px; border-radius: 10px; color: black;">
-        <h1>Stats:</h1>
-        <h3>Total Clicks: <span id="totalClicks">0</span></h3>
-        <h3>Power-Ups Owned: <span id="powerUpCount">0</span></h3>
-        <h3>Times Played: <span id="timesPlayed">0</span></h3>
+    <div id="gameHeader">
+        <h1 class="game-title">Clicker Game</h1>
+        <p class="game-subtitle">Test your clicking speed!</p>
     </div>
 
+    <div id="statusBoard">
+        <h1>Game Stats</h1>
+        <div class="stats-section">
+            <div class="section-title">Score & Power</div>
+            <div class="stats-row">
+                <span>Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="stats-row">
+                <span>Click Power:</span>
+                <span id="clickValue">1</span>
+            </div>
+            <div class="stats-row">
+                <span>Combo Multiplier:</span>
+                <span id="comboMultiplier">1.0x</span>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <div class="section-title">Upgrades</div>
+            <div class="stats-row">
+                <span>Power-Ups Owned:</span>
+                <span id="powerUpCount">0</span>
+            </div>
+            <div class="stats-row">
+                <span>Power-Up Cost:</span>
+                <span id="powerUpCost">500</span>
+            </div>
+            <div class="stats-row">
+                <span>Unlock At Clicks:</span>
+                <span id="nextPowerUpAt">500</span>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <div class="section-title">Statistics</div>
+            <div class="stats-row">
+                <span>Total Clicks:</span>
+                <span id="totalClicks">0</span>
+            </div>
+            <div class="stats-row">
+                <span>Sessions Played:</span>
+                <span id="timesPlayed">0</span>
+            </div>
+        </div>
+    </div>
 
-    <button id="clickButton">Click!</button>
+    <div id="particleContainer"></div>
+    
+    <div class="combo-display" id="comboDisplay" hidden>
+        <span class="combo-text">COMBO x<span id="comboValue">0</span></span>
+    </div>
 
-    <button id="powerUpButton" style="display: none; position: absolute; bottom: 20px; left: 20px; padding: 10px 20px;
-     background: #710909; color: black; border: none; border-radius: 5px; cursor: pointer; font-size: 18px;">Power
-        Up!</button>
+    <button id="clickButton" aria-label="Click button">Click!</button>
 
+    <button id="powerUpButton" hidden="hidden" aria-label="Buy power up">Power-Up</button>
+    
+    <button id="resetButton" class="reset-btn" aria-label="Reset game">Reset</button>
+    
     <script src="script.js"></script>
 </body>
 
